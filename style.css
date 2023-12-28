@@ -1,0 +1,149 @@
+#gameBoard {
+    display: flex; /* Flex container to hold the words */
+    flex-wrap: wrap; /* Allow words to wrap to the next line */
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align items to the start of the cross axis */
+    gap: 16px; /* Spacing between words */
+    padding: 20px; /* Padding around the entire game board */
+}
+
+#gameBoard .word {
+    display: flex; /* Makes the word a flex container */
+    gap: 2px; /* Spacing between letters in a word */
+}
+
+#gameBoard .word .letter {
+    width: 50px; /* Width of each letter box */
+    height: 50px; /* Height of each letter box */
+    border: 2px solid black; /* Border around each letter box, always visible */
+    display: flex; /* Use flex to center content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-size: 20px; /* Letter size */
+    background-color: #fff; /* Background color for the letter boxes */
+    color: transparent; /* Make the text color transparent to hide the letter */
+    transition: color 1s ease; /* Transition for the text color */
+}
+
+
+#keyboard {
+    display: flex; /* Changed from grid to flex for uniform spacing */
+    flex-wrap: wrap; /* Allow keyboard rows to wrap */
+    justify-content: center; /* Center the keyboard horizontally */
+    gap: 5px; /* Spacing between keys */
+    padding: 20px;
+}
+
+#keyboard button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid grey;
+    display: flex; /* Use flex to center text in buttons */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+}
+
+#keyboard button:hover {
+    background-color: #ddd; /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+#scoreboard {
+    padding: 20px;
+    text-align: center; /* Center scoreboard text */
+}
+
+
+#guessButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0d4fa7; /* A nice shade of green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#guessButton:hover {
+    background-color: #3370c0; /* Darken the button color slightly on hover */
+}
+
+/* Style for the keyboard buttons when the letter matches */
+.button-match {
+    background-color: #4CAF50; /* Green background for correct guesses */
+    color: white; /* White text for contrast */
+}
+
+/* Style for the keyboard buttons when the letter does not match */
+.button-mismatch {
+    background-color: #a0a0a0; /* Dark gray background for incorrect guesses */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8; /* Light gray background */
+    border-bottom: 2px solid #ddd; /* Add a bottom border */
+}
+
+header h1 {
+    margin: 0;
+    color: #333; /* Dark gray color */
+    font-size: 2em; /* Big title */
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #666; /* Medium gray color */
+}
+
+footer {
+    text-align: center; /* Center the text */
+    clear: both; /* Clear floats on both sides */
+}
+
+footer small {
+    color: rgb(102, 32, 32); /* Change color to red */
+}
+
+
+#buttonContainer {
+    text-align: center; /* Center-align the container for the buttons */
+    margin-top: 20px; /* Add some space above the buttons */
+    display: inline-block; /* Make the container an inline block for better control */
+    order: 1;
+}
+
+.refreshButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #6c757d; /* A neutral shade */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Change cursor on hover to indicate it's clickable */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin-left: 10px; /* Add some space between the buttons */
+}
+
+.refreshButton:hover {
+    background-color: #5a6268; /* Darken the button color slightly on hover */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    align-self: stretch;
+}
+
+
+footer {
+    padding-top: 20px;
+    order: 2; /* Make the footer appear second */
+}
